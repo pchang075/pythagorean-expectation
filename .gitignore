@@ -48,10 +48,8 @@ po/*~
 # RStudio Connect folder
 rsconnect/
 
-# Literature
-literature/
-
 # Other
 .DS_Store
 .Rprofile
+literature/
 
