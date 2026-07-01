@@ -3,7 +3,7 @@
 ## Overview
 This project explores the accuracy of expected win percentage models. The general form of the original Pythagorean Expectation model introduced by Bill James is given by:
 
-$$\text{EWP} = \frac{RS^\gamma}{RS^\gamma + RA^\gamma}$$
+$$EWP = \frac{RS^\gamma}{RS^\gamma + RA^\gamma}$$
 
 where EWP is the expected win percentage, RS is the number of runs scored by the team, RA is the number of runs allowed by the team, and $\gamma$ is an estimated parameter. Other related models will also be explored, such as this linear model proposed by Michael Jones and Linda Tappin:
 
