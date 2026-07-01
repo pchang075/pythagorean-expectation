@@ -3,15 +3,15 @@
 ## Overview
 This project explores the accuracy of expected win percentage models. The general form of the original Pythagorean Expectation model introduced by Bill James is given by:
 
-$$\text{Win\%} = \frac{RS^\gamma}{RS^\gamma + RA^\gamma}$$
+$$\text{EWP} = \frac{RS^\gamma}{RS^\gamma + RA^\gamma}$$
 
-where RS is the number of runs scored by the team, RA is the number of runs allowed by the team, and $\gamma$ is an estimated parameter. Other related models will also be explored, such as this linear model proposed by Michael Jones and Linda Tappin:
+where EWP is the expected win percentage, RS is the number of runs scored by the team, RA is the number of runs allowed by the team, and $\gamma$ is an estimated parameter. Other related models will also be explored, such as this linear model proposed by Michael Jones and Linda Tappin:
 
-$$\text{Win\%} = \frac{1}{2} + \beta(RS - RA)$$
+$$EWP = \frac{1}{2} + \beta(RS - RA)$$
 
 where $\beta$ is an estimated parameter that is related to $\gamma$. This relationship is shown in this form derived by Kevin Dayaratna and Steven Miller:
 
-$$\text{Win\%} = \frac{1}{2} + \frac{\gamma}{4\bar{R}}(RS - RA)$$
+$$EWP = \frac{1}{2} + \frac{\gamma}{4\bar{R}}(RS - RA)$$
 
 where $\bar{R}$ is the average number of runs scored by the league. Dayaratna and Miller showed that Jones and Tappin's linear model is a first-order approximation of James' Pythagorean Expectation model.
 
