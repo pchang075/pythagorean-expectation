@@ -50,3 +50,8 @@ rsconnect/
 
 # Literature
 literature/
+
+# Other
+.DS_Store
+.Rprofile
+
