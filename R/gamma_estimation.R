@@ -1,3 +1,6 @@
+library(ggplot2)
+library(patchwork)
+
 wl_data <- read.csv('data/wl_data.csv')
 
 # Non-linear squares
@@ -43,14 +46,26 @@ gamma_mle <- mle_fit$par
 wl_data$mle_pred <- with(wl_data, R^gamma_mle / (R^gamma_mle + RA^gamma_mle))
 wl_data$mle_resid <- wl_data$WinPct - wl_data$mle_pred
 
-# Residual plots
-par(mfrow = c(1, 2))
-plot(wl_data$nls_pred, wl_data$nls_resid,
-     main = "NLS Residuals",
-     xlab = "Predicted Win Percentage", ylab = "Residuals")
-abline(h = 0)
-plot(wl_data$mle_pred, wl_data$mle_resid,
-     main = "MLE Residuals",
-     xlab = "Predicted Win Percentage", ylab = "Residuals")
-abline(h = 0)
+# Residual plots (save to /figures)
+nls_resid_plot <- ggplot(wl_data, aes(x = nls_pred, y = nls_resid)) +
+  geom_point() +
+  geom_hline(yintercept = 0) +
+  labs(
+    title = 'NLS Residuals',
+    x = 'Predicted Win Percentage',
+    y = 'Residuals'
+  )
 
+mle_resid_plot <- ggplot(wl_data, aes(x = mle_pred, y = mle_resid)) +
+  geom_point() +
+  geom_hline(yintercept = 0) +
+  labs(
+    title = 'MLE Residuals',
+    x = 'Predicted Win Percentage',
+    y = 'Residuals'
+  )
+
+resid_plots <- nls_resid_plot + mle_resid_plot
+resid_plots
+
+ggsave('figures/gamma-estimation-residuals.png')
