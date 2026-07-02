@@ -24,10 +24,10 @@ where $\bar{R}$ is the average number of runs scored (or allowed) by the league.
 ### Research Questions
 1. What is the optimal value of the parameter $\gamma$ for the 2006-2025 MLB seasons?
 2. How does the optimized Pythagorean model compare with Jones and Tappin's linear model?
-3. How do higher order approximations compare with both models?
+3. How do higher order approximations compare with the Pythagorean and linear models?
 
 ### Data
 The data used for this project is sourced from Sean Lahman's Baseball Database via the [Lahman](https://lahman.r-forge.r-project.org/doc/) R package.
 
 ### Current Status
-Comparing Jones and Tappin's linear model and James' Pythagorean model (with $\gamma$ = 1.78)
+Comparing Jones and Tappin's linear model with James' Pythagorean model (with $\gamma$ = 1.78).
