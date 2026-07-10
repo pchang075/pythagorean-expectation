@@ -1,7 +1,7 @@
 **Method**
   1. Recreate Dayaratna and Miller's (DM's) empirical analysis using data from the 2006-2025 seasons (fit a model for each season) 
   2. Compare results to DM's results
-  3. Compare the RMSE of the linear models to the RMSE of the Pythagorean models (observed)
+  3. Compare the observed RMSE of the linear models to the observed RMSE of the Pythagorean models
 
 **Results**
 - Successfully recreated DM's analysis 
