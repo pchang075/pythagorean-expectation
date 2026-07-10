@@ -1,7 +1,8 @@
 **Method**
-  1. Estimate gamma for 2006-2025 
-  2. Estimate gamma for each individual season 
-  3. Compare individual gammas to the accepted value of gamma (1.82)
+  1. Load data from the 2006-2025 seasons 
+  2. Estimate gamma for the entire period 
+  3. Estimate gamma for each individual season 
+  4. Compare individual gammas to the accepted value of gamma (1.82)
    
 **Results**
 - Gamma estimate for 2006-2025: 1.77635

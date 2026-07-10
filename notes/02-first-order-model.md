@@ -1,9 +1,7 @@
 **Method**
   1. Recreate Dayaratna and Miller's (DM's) empirical analysis using data from the 2006-2025 seasons (fit a model for each season) 
-  2. Compare results to DM's results 
-    - Including whether the appropriate values of gamma are extracted 
-  3. Compare the RMSE of the linear models to the RMSE of the Pythagorean models 
-    - Add ExpWinPct (calculated using the Pythagorean model), RMSE_Pythag, RMSE_Linear, and RMSE_Change (%) columns to DM's table
+  2. Compare results to DM's results
+  3. Compare the RMSE of the linear models to the RMSE of the Pythagorean models (observed)
 
 **Results**
 - Successfully recreated DM's analysis 
