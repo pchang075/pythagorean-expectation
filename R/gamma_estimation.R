@@ -9,7 +9,7 @@ pythag_fit <- nls(
 summary(pythag_fit)
 as.numeric(confint(pythag_fit))
 
-# Estimate gamma for each individual season from 2006-2025 ----
+# Estimate gamma for each individual season from 2006-2025
 # Function that fits models for individual seasons 
 #   Returns the gamma estimate and confidence interval for each season as a data frame row
 fit_pythag_model <- function (season) {
@@ -29,10 +29,10 @@ fit_pythag_model <- function (season) {
   return(results)
 }
 
-# Fit models
+# Fit models ----
 gamma_hats <- data.frame()
 for (season in 2006:2025) {
   gamma_hats <- rbind(gamma_hats, fit_pythag_model(season))
 }
-write.csv(gamma_hats, 'output/gamma-estimates.csv', row.names = FALSE)
+write.csv(gamma_hats, 'output/gamma_estimates.csv', row.names = FALSE)
 
