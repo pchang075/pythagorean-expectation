@@ -27,7 +27,10 @@ draw_plot <- function (gamma_hat, R_avg) {
     geom_line(aes(y = pythag, color = 'Pythagorean')) +
     geom_line(aes(y = first_order, color = 'First-order')) +
     geom_line(aes(y = second_order, color = 'Second-order')) +
-    scale_color_manual(values = c('Pythagorean' = 'black', 'First-order' = 'red', 'Second-order' = 'blue')) +
+    scale_color_manual(
+      values = c('Pythagorean' = 'black', 'First-order' = 'red', 'Second-order' = 'blue'),
+      breaks = c('Pythagorean', 'First-order', 'Second-order')  
+    ) +
     labs(
       x = "Run Differential (R - RA)",
       y = "Expected Win Percentage",
@@ -41,15 +44,15 @@ draw_plot <- function (gamma_hat, R_avg) {
 plot_models <- function (param = 'gamma') {
   plots <- list()
   if (param == 'gamma') {
-    R_avg <- median(read.csv('output/first_order_model_params.csv')$R_avg)
-    quartiles <- as.numeric(quantile(read.csv('output/gamma_estimates.csv')$gamma_hat, probs = c(0, 0.25, 0.5, 0.75, 1), type = 1))
+    R_avg <- median(read.csv('tables/first_order_model_params.csv')$R_avg)
+    quartiles <- as.numeric(quantile(read.csv('tables/gamma_estimates.csv')$gamma_hat, probs = c(0, 0.25, 0.5, 0.75, 1), type = 1))
     
     for (gamma_hat in quartiles) {
       plots[[length(plots) + 1]] <- draw_plot(gamma_hat, R_avg)
     }
   } else if (param == 'R') {
-    gamma_hat <- median(read.csv('output/gamma_estimates.csv')$gamma_hat)
-    quartiles <- as.numeric(quantile(read.csv('output/first_order_model_params.csv')$R_avg, probs = c(0, 0.25, 0.5, 0.75, 1), type = 1))
+    gamma_hat <- median(read.csv('tables/gamma_estimates.csv')$gamma_hat)
+    quartiles <- as.numeric(quantile(read.csv('tables/first_order_model_params.csv')$R_avg, probs = c(0, 0.25, 0.5, 0.75, 1), type = 1))
     
     for (R_avg in quartiles) {
       plots[[length(plots) + 1]] <- draw_plot(gamma_hat, R_avg)
@@ -78,5 +81,6 @@ wrap_plots(R_plots, ncol = 3) +
     plot.title = element_text(size = 10))
 
 # Single plot(s) ----
-draw_plot(gamma = 1.628915, R_avg = 720.4667)
+draw_plot(gamma = 1.953, R_avg = 786.63)
+draw_plot(gamma = 1.628915, R_avg = 720.4667) # 2025
 ggsave('figures/model_comparison_plot.png')

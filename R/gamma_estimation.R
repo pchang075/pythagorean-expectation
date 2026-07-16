@@ -34,5 +34,5 @@ gamma_hats <- data.frame()
 for (season in 2006:2025) {
   gamma_hats <- rbind(gamma_hats, fit_pythag_model(season))
 }
-write.csv(gamma_hats, 'output/gamma_estimates.csv', row.names = FALSE)
+write.csv(gamma_hats, 'tables/gamma_estimates.csv', row.names = FALSE)
 

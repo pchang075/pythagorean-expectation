@@ -1,3 +1,5 @@
+*Note: This document is for brainstorming and is constantly rewritten as the project expands. It may not include complete information about the entire project. See the other documents in this folder for more accurate information about different parts of the project.*
+
 **Gamma Estimation** 
   1. Load data from the 2006-2025 seasons 
   2. Estimate gamma for the entire period 

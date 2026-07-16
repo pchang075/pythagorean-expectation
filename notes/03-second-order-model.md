@@ -31,3 +31,4 @@
 
 **Follow-up**
 - Explore why having $(R - R_{avg})^2 - (RA - R_{avg}^2)$ seems to result in a better model than even the Pythagorean formula
+- Look into Pythagenport and Pythagenpat
