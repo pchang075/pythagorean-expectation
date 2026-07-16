@@ -20,4 +20,4 @@ The data used for this project are sourced from Sean Lahman's Baseball Database 
 1. The second-order approximation is inferior to the first-order approximation in both explaining real MLB data and approximating the Pythagorean expectation model.<br>
 
 ### Current Status
-Finished writing *An Analysis of the Second-Order Taylor Approximation of the Pythagorean Expectation Win-Loss Formula* (see papers/)
+Finished writing *An Analysis of the Second-Order Taylor Approximation of the Pythagorean Expectation Win-Loss Formula* (see papers/).
