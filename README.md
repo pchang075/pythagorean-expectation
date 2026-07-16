@@ -17,8 +17,8 @@ The data used for this project are sourced from Sean Lahman's Baseball Database 
 2. Does the third-order Taylor approximation perform better than the second-order approximation?
 
 ### Results
-1. The second-order approximation is inferior to the first-order approximation in both explaining real MLB data and approximating the Pythagorean expectation model.
+1. The second-order approximation is inferior to the first-order approximation in both explaining real MLB data and approximating the Pythagorean expectation model.<br>
 *See papers/ for more information*
 
 ### Current Status
-Finished writing *An Analysis of the Second-Order Taylor Approximation of the Pythagorean Expectation Win-Loss Formula*
+Finished writing *An Analysis of the Second-Order Taylor Approximation of the Pythagorean Expectation Win-Loss Formula* (see papers/)
